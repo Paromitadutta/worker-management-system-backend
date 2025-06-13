@@ -2,7 +2,6 @@ package com.example.Learner.Controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,46 +16,45 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.Learner.Service.SignupService;
 import com.example.Learner.model.Signup;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 @RestController
 @RequestMapping("api/signup")
 public class SignupController {
 
 	private final SignupService ss;
+
 	@Autowired
-	public SignupController(SignupService ss)
-	{
-		this.ss=ss;
+	public SignupController(SignupService ss) {
+		this.ss = ss;
 	}
+
 	@PostMapping("/add")
-	public Signup addSignup(@RequestBody Signup signup)
-	{
+	public Signup addSignup(@RequestBody Signup signup) {
 		return ss.addData(signup);
 	}
+
 	@GetMapping
-	public List<Signup> getAllSignup()
-	{
+	public List<Signup> getAllSignup() {
 		return ss.getAllSignup();
 	}
+
 	// ✅ GET - Get all by ID
 	@GetMapping("/{id}")
-	public Signup getAllSignupById(@PathVariable("id") Long id)
-	{
+	public Signup getAllSignupById(@PathVariable("id") Long id) {
 		return ss.getAllSignupById(id);
 	}
-	//Delete registers by Id
+
+	// Delete registers by Id
 	@DeleteMapping("/{id}")
-	public void deleteSecurity(@PathVariable("id") Long id)
-	{
+	public void deleteSecurity(@PathVariable("id") Long id) {
 		ss.deleteSecurity(id);
 	}
-	//put the registers
-	
+	// put the registers
+
 	@PutMapping(("/{id}"))
-	public List <Signup> UpdateSignup(@PathVariable Long id,@RequestBody Signup UpdateSignup)
-	{
-		Signup saveSignup=ss.UpdateSignup(id,UpdateSignup);
+	public List<Signup> UpdateSignup(@PathVariable Long id, @RequestBody Signup UpdateSignup) {
+		Signup saveSignup = ss.UpdateSignup(id, UpdateSignup);
 		return null;
 	}
-	
+
 }

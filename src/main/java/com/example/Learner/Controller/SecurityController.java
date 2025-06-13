@@ -15,19 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Learner.Service.SecurityService;
 import com.example.Learner.model.Security;
-@CrossOrigin(origins = "http://localhost:3000")
+
+@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 @RestController
 @RequestMapping("api/security")
 public class SecurityController {
 
-	@Autowired
-   	SecurityService ss;
+    @Autowired
+    SecurityService ss;
 
-	@PostMapping("/add")
+    @PostMapping("/add")
     public Security addSecurity(@RequestBody Security security) {
         return ss.addData(security);
     }
-    
+
     // GET - Get all Securities
     @GetMapping
     public List<Security> getAllSecurity() {
@@ -45,10 +46,10 @@ public class SecurityController {
     public void deleteSecurity(@PathVariable("id") Long id) {
         ss.deleteSecurity(id);
     }
-@PutMapping(("/{id}"))
-public List<Security>UpdateSecurity(@PathVariable Long id,	@RequestBody Security UpdateSecurity)
-{
-	Security saveSecurity=ss.UpdateSecurity(id,UpdateSecurity);
-	return null;
-}
+
+    @PutMapping(("/{id}"))
+    public List<Security> UpdateSecurity(@PathVariable Long id, @RequestBody Security UpdateSecurity) {
+        Security saveSecurity = ss.UpdateSecurity(id, UpdateSecurity);
+        return null;
+    }
 }

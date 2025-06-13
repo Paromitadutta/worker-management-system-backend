@@ -8,7 +8,7 @@
 //import java.io.IOException;
 //
 //@RestController
-//@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 //public class PaymentController {
 //
 //    @PostMapping("/create-order")
@@ -63,7 +63,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.io.IOException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 public class PaymentController {
 
     @Autowired

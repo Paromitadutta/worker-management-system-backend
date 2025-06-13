@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.example.Learner.Service.ProfileService;
 import com.example.Learner.model.Profile;
 
-@CrossOrigin(origins = "http://localhost:3000")  // Allow React frontend at this origin
+@CrossOrigin(origins = "https://worker-management-system.vercel.app") // Allow React frontend at this origin
 @RestController
 @RequestMapping("api/profile")
 public class ProfileController {

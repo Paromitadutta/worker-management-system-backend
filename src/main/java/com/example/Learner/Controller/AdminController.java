@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.Learner.Service.AdminService;
 import com.example.Learner.model.Admin;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 @RestController
 @RequestMapping("/api/admin")
 public class AdminController {

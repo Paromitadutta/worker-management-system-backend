@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.example.Learner.Service.SecurityGuardOneService;
 import com.example.Learner.model.SecurityGuardOne;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 @RestController
 @RequestMapping("api/securityguardone")
 public class SecurityGuardOneController {

@@ -3,7 +3,7 @@ package com.example.Learner.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;  // <-- Added import here
+import org.springframework.web.bind.annotation.CrossOrigin; // <-- Added import here
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.Learner.Service.WorkerTwoService;
 import com.example.Learner.model.WorkerTwo;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 @RestController
 @RequestMapping("/api/workertwo")
 public class WorkerTwoController {

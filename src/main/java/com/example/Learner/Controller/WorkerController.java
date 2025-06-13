@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.Learner.Service.WorkerService;
 import com.example.Learner.model.Workers;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://worker-management-system.vercel.app")
 @RestController
 @RequestMapping("api/workers")
 public class WorkerController {
